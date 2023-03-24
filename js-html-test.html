@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Info-->
+  <meta charset="utf-8">
+  <title>Optic Math</title>
+  <meta name="description" content="Math exposition with simple, visual, interactive, and intuitive explanations.">
+
+  <!-- Mobile Adjustments -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <!-- JavaScript-->
+    <!--Custom-->
+  
+    <!-- MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <div class = "content">
+    <div class = "container">
+        <!--MAIN CONTENT BELOW:-->
+        <canvas></canvas>
+        <script>
+            //Set canvas height and width
+            //TODO: set maximum for width
+            var ratio = 2.0
+            let canvas = document.querySelector("canvas");
+            canvas.width = window.innerWidth;
+            canvas.height = canvas.width/ratio;
+
+            //define context as cx
+            let cx = canvas.getContext("2d");
+
+            //draw
+            cx.fillStyle = "red";
+            cx.fillRect(10, 10, 100, 50);
+          </script>
+    </div>
+  </div>
+</body>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>

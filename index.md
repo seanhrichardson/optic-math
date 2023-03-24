@@ -1,9 +1,10 @@
 ---
 layout: page
-section: HOME PAGE
-title: Home Page
+title: Home
 ---
 
-## Test
+## Optic Math
 
-Hello World
+This site is currently being built.
+
+Opticmath will provide simple and intuitive math exposition on higher level topics with interactive visuals.
