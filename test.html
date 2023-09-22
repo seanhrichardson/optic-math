@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotatable Sphere with SVG</title>
+</head>
+<body>
+<svg width="200" height="200" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="90" fill="none" stroke="blue" id="sphere" stroke-width="3"/>
+    <!-- Simulate some 3D effect using circles. -->
+    <circle cx="100" cy="100" r="80" fill="none" stroke="lightblue" stroke-width="1"/>
+    <circle cx="100" cy="100" r="70" fill="none" stroke="lightblue" stroke-width="1"/>
+</svg>
+
+<script>
+    let sphere = document.getElementById('sphere');
+
+    let isDragging = false;
+    let lastX;
+
+    sphere.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        lastX = event.clientX;
+    });
+
+    window.addEventListener('mousemove', (event) => {
+        if (!isDragging) return;
+
+        let deltaX = event.clientX - lastX;
+        
+        // Update the rotation illusion by changing the stroke. 
+        // This is a simple effect; in reality, a 3D engine would handle rotations and shading.
+        let newStrokeWidth = parseFloat(sphere.getAttribute('stroke-width')) + deltaX * 0.05;
+        if (newStrokeWidth < 1) newStrokeWidth = 1;
+        if (newStrokeWidth > 10) newStrokeWidth = 10;
+        sphere.setAttribute('stroke-width', newStrokeWidth);
+
+        lastX = event.clientX;
+    });
+
+    window.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+</script>
+</body>
+</html>

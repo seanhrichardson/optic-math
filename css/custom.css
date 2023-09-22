@@ -25,7 +25,6 @@ a {
 details > summary {
   cursor: pointer;
   display: list-item;
-  font-weight: bold;
 }
 details {
   margin-bottom: 2.5rem;

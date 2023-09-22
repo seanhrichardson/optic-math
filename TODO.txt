@@ -1,0 +1,15 @@
+(1) If two metric spaces have the same convergent subsequences, then they must have the same topology:
+https://math.stackexchange.com/questions/76691/example-of-different-topologies-with-same-convergent-sequences
+TODO: Prove this. 
+(I really like this result).
+
+Therefore, the topology on C(X) is unique in the following sense. 
+Any metric on C(X) (which we need to make C(X) complete) such that f_n -> 0 iff sup(f) -> 0 will induce the same topology.
+
+Furthermore, we want the topology on C_c^{infty}(Omega) to be 
+
+Also, philosphically, I think the topologies and metrics should be all about the convergent sequences. This is what is usually used in practice and this is the better motivation.
+
+In particular, for metrizable vector spaces, what sequences converge to 0 comppletely determines the topology!!!
+
+TODO: Use this as motivation/justification for topologies/metrics/seminorms/norms on C_c(X) and C_c^{infty}.

@@ -1,7 +1,12 @@
 ---
 layout: page
-title: Riemannian Manifolds
+title: Riemannian Metric
 ---
+
+#### Define Riemannian Metric
+
+#### Using Riemmannian Metric (Maybe next page?)
+
 /\*need to define tangent vectors somewhere\*/
 
 /\*give formal and informal decscriptions?\*/
