@@ -5,18 +5,19 @@ title: Geodesic Equation
 
 ## Geodesics
 
-/\*motivate using energy functional... it still detects straight lines AND requires that they be parametrized with constant spee (which can be an advantage in physics. ex: an inertial object floating through space minimizes the energy functional.)\*/
+One important geometric question still remains unanswered: 
 
-#### Example/Practice Derivation
-/\*make this as simple as possible... could even change to \\(n=2\\) case? Then general $n$ case will be derived later as a consequence.\*/
+*Given a curve \\(\gamma(t)\\) on a Riemannian manifold, how do we know if it is straight?*
 
-/\*priority here is to explain the variation idea\*/
+/\*...\*/
 
-Computing geodesics in Euclidean space.
+#### Energy Functional
 
-Consider a curve \\(\gamma(t) = (x(t), y(t))\\) on the plane with \\(a \leq t \leq b\\).
+Given a curve \\(\gamma(t)\\) over 
 
-A slight variation of this curve can be written as \\(\gamma\_{\varepsilon} = ((x(t)+\varepsilon f(t), y(t) + \varepsilon g(t))\\) for our choice of \\(f(t)\\) and \\(g(t)\\) so that \\(f(a) = f(b) = 0\\) and \\(g(a) = g(b) = 0\\). /\*explain\*/
+#### Straight Lines in the Plane
+
+Consider a curve \\(\gamma(t) = (x(t), y(t))\\) on \\(\mathbb{R}^2\\) with \\(a \leq t \leq b\\). Now we consider a small pertubation \\(\gamma_{\varepsilon}(t)\\) of this curve that still has the same endpoints. One way to write such a small pertubation is \\(\gamma\_{\varepsilon}(t) = ((x(t)+\varepsilon f(t), y(t) + \varepsilon g(t))\\) for any choice of smooth functions \\(f(t)\\) and \\(g(t)\\) that satisfy \\(f(a) = f(b) = 0\\) and \\(g(a) = g(b) = 0\\). This last condition is to ensure \\(\gamma_{\varepsilon}(t)\\) has the same endpoints: \\(\gamma_{\varepsilon}(a) = \gamma(a)\\\) and \\(\gamma_{\varepsilon}(b) = \gamma(b)\\). 
 
 Then
 
@@ -52,7 +53,42 @@ Therefore
 \\]
 /\*finish explanation\*/
 
-#### Example
+#### Straight Lines on a Manifold
+Studying constant-speed curves \\(\gamma: [a,b] \to M\\) that are critical values of the Energy functional
+\\[
+    E(\gamma) 
+    = \frac{1}{2}\int_{a}^b\|\dot{\gamma}^2\|\_g dt
+    = \frac{1}{2}\int_{a}^b g_{ij} \frac{\partial x^i}{\partial t} \frac{\partial x^j}{\partial t}dt
+\\]
+That is, we require
+\\[
+    \left.\frac{d E(\gamma_{\varepsilon})}{d \varepsilon}\right\|\_{\varepsilon = 0} = 0.
+\\]
+The following computation yields an equivalent condition.
+\\[
+    0 = 2\frac{\partial E(\gamma_{\varepsilon})}{\partial \varepsilon}\\\\\
+    = \int_{a}^b \frac{\partial }{\partial \varepsilon}\left(g_{ij}\frac{\partial x^i}{\partial t} \frac{\partial x^j}{\partial t}\right)dt\\\\\
+    = 
+\\]
+
+/\*FINISH THIS COMPUTATION WHEN GOOD SYSTEM TO EXPLAIN STEPS IN EQUATION IS UP AND RUNNING\*/
+
+Therefore we conclude that for a line \\(\gamma(t) = (x^1(t), \cdots , x^n(t))\\) to be straight, it must satisfy
+\\[
+    \frac{d^2 x^k}{d t^2} + \sum_{ij} \frac{1}{2} g^{kl} \left(\frac{\partial g_{lj}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l}\right)\frac{d x^i}{d t}\frac{d x^i}{d t} = 0, \quad 1 \leq k \leq n
+\\]
+
+#### Definition of Geodesics
+A curve \\(\gamma(t)\\) is a *geodesic* if, when written in any local coordinates \\(\gamma(t) = (x^1(t), \cdots, x^n(t))\\), it locally satisfies the *geodesic equations*
+\\[
+    \ddot{x}^k(t) + \dot{x}^i(t)\dot{x}^j(t)\Gamma_{ij}^k(x(t)) = 0, \quad 1 \leq k \leq n
+\\]
+where the functions \\(\Gamma_{ij}^k\\) are the *Christoffel symbols* and are given in coordinates by
+\\[
+    \Gamma_{ij}^k = \frac{1}{2}g^{kl}(\partial_i g_{jl} + \partial_j g_{il} - \partial_l g_{ij})
+\\]
+
+#### Example: geodesics on the sphere
 Computing geodesics on the sphere. We can express a path \\(\gamma: [a,b] \to \mathbb{S}^2\\) in coordinates by \\(\gamma(t) = (\theta(t), \phi(t))\\). First compute the Christoffel symbols /\*TODO: SHOW (hidden?) COMPUTATIONS FOR THESE\*/
 
 Recall \\(g = d\phi^2 + \sin\phi^2 d\theta^2\\)
@@ -75,7 +111,7 @@ Observe that the equator \\(\gamma(t) = (t, \pi/2)\\) satisfies the geodesic equ
 
 In fact, as any great circle on the sphere can be expressed as a meridian (by choosing the north and south pole to be on that great circle), this shows all great circles on the sphere are geoesics!
 
-#### Example
+#### Example: geodesics in hyperbolic space
 Computing geodesics in hyperbolic space.
 
 First compute the Christoffel symbols.
@@ -115,34 +151,3 @@ To visualize this, oberserve
 \\((x-a)^2+y^2 = \left(\frac{1}{c}\right)^2\\) and so half circles centered on the boundary \\(y = 0\\) are geodesics.
 
 /\*cite iva\*/
-
-
-#### Statement
-A curve \\(\gamma\\) is a *geodesic* if, when written in coordinates \\(\gamma(t) = (x^1(t), \cdots, x^n(t))\\), it satisfies the following *geodesic equations*.
-\\[
-    \ddot{x}^k(t) + \dot{x}^i(t)\dot{x}^j(t)\Gamma_{ij}^k(x(t)) = 0
-\\]
-where the functions \\(\Gamma_{ij}^k\\) are the *Christoffel symbols* and are given in coordinates by
-\\[
-    \Gamma_{ij}^k = \frac{1}{2}g^{kl}(\partial_i g_{jl} + \partial_j g_{il} - \partial_l g_{ij})
-\\]
-
-#### Derivation
-Studying constant-speed curves \\(\gamma: [a,b] \to M\\) that are critical values of the Energy functional
-\\[
-    E(\gamma) 
-    = \frac{1}{2}\int_{a}^b\|\dot{\gamma}^2\|\_g dt
-    = \frac{1}{2}\int_{a}^b g_{ij} \frac{\partial x^i}{\partial t} \frac{\partial x^j}{\partial t}dt
-\\]
-That is, we require
-\\[
-    \left.\frac{d E(\gamma_{\varepsilon})}{d \varepsilon}\right\|\_{\varepsilon = 0} = 0.
-\\]
-The following computation yields an equivalent condition.
-\\[
-    0 = 2\frac{\partial E(\gamma_{\varepsilon})}{\partial \varepsilon}\\\\\
-    = \int_{a}^b \frac{\partial }{\partial \varepsilon}\left(g_{ij}\frac{\partial x^i}{\partial t} \frac{\partial x^j}{\partial t}\right)dt\\\\\
-    = 
-\\]
-
-/\*CONTINUE THIS WHEN GOOD SYSTEM TO EXPLAIN STEPS IN EQUATION IS UP AND RUNNING\*/

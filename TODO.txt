@@ -1,15 +1,37 @@
-(1) If two metric spaces have the same convergent subsequences, then they must have the same topology:
-https://math.stackexchange.com/questions/76691/example-of-different-topologies-with-same-convergent-sequences
-TODO: Prove this. 
-(I really like this result).
+PRIORITY:
+- Topology, following manifolds class.
+    - topology page (almost done)
+- PDES stuff that I want to learn
+    - Sobolev spaces
+    - Pseudodifferential operators
+    - Elliptic regularity
+- clean up all ongoing projects
+    - Euler Lagrange (almost done)
+    - forms motivation and wedge product pages (finish this when manifolds gets there)
+    - heat equation motivation (almost done... add easier motivation and exercises to Einstein one.)
+    - minimal surface equation motivation (almost done)
+    - rigid body dynamics page
+    - metric space continuity (done with proof)
+    - wave equation (derivation and 1d basically done)
+- Road to Schwarzschild
+    - finish riemannian manifold page
+    - finish geodesic page
+    - finish sphere page
+    - start tangent vectors...
+    - special relatiivity (almost done)
 
-Therefore, the topology on C(X) is unique in the following sense. 
-Any metric on C(X) (which we need to make C(X) complete) such that f_n -> 0 iff sup(f) -> 0 will induce the same topology.
 
-Furthermore, we want the topology on C_c^{infty}(Omega) to be 
+SOON:
+- distributions (not motovation, will think of that later).
+- Riesz representation theorem
+- Fourier series, Fourier transform, Pontryagin Duality
+- Dirichlet problem
 
-Also, philosphically, I think the topologies and metrics should be all about the convergent sequences. This is what is usually used in practice and this is the better motivation.
+TECHNICAL:
+- create engine for making mini-books.
+- click dots in mathjax to display computation steps.
+- allow for hover text over equals signs to explain steps in mathjax? ALthough also want to try and be mobile friendly...
 
-In particular, for metrizable vector spaces, what sequences converge to 0 comppletely determines the topology!!!
-
-TODO: Use this as motivation/justification for topologies/metrics/seminorms/norms on C_c(X) and C_c^{infty}.
+FINISHED!
+- tensor product page
+- minecraft page
