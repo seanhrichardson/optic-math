@@ -1,6 +1,7 @@
 PRIORITY:
-- Topology, following manifolds class.
+- Manifolds, following manifolds class.
     - topology page (almost done)
+- Dynamics
 - PDES stuff that I want to learn
     - Sobolev spaces
     - Pseudodifferential operators

@@ -10,15 +10,11 @@ title: Topological Manifold
 
 ## Topological Manifold
 
-Recall our preliminary definition of manifold below.
+Recall our extrinsic definition of a topological manifold below, noting *locally Euclidean* /\*link?\*/ means that every point has a neighborhood homeomorphic to a subset of \\(\mathbb{R}^n\\). 
 
-**Def. (Manifold).** A subset \\(M \subset \mathbb{R}^m\\) is called an *\\(n\\)-dimensional manifold* if \\(M\\) is locally Euclidean of dimension \\(n\\).
+**Extrinsic definition of topological manifold.** A subset \\(M \subset \mathbb{R}^m\\) is called an *\\(n\\)-dimensional manifold* if \\(M\\) is locally Euclidean of dimension \\(n\\).
 
-Where locally Euclidean is defined as follows.
-
-**Def. (Locally Euclidean).** A topological space \\(X\\) is *locally Euclidean of dimension \\(n\\)* if for each \\(p \in X\\), there exists an open set \\(U \subset X\\) containing \\(p\\) that is homeorphic to an open subset \\(U \subset \mathbb{R}^n\\).
-
-Further recall that a *topological manifold* is any topological space that could come from a manifold as defined above. Our goal in this section is to provide an equivalent definition for topological manifold as simply a topological space that satisfies particular properties, removing the dependence of this definition on \\(\mathbb{R}^m\\). For this, we first study properties of a manifold.
+Our goal in this section is to provide an equivalent definition for topological manifold as simply a topological space that satisfies particular properties, removing the dependence of this definition on \\(\mathbb{R}^m\\). For this, we first study properties of a manifold.
 
 <!-- below section is on Hausdorff spaces, hopefully indepedent of manifolds... could potentially move this to the topology section? Although I think here is better for the manifold sequence? -->
 
@@ -53,6 +49,6 @@ In metric spaces, we have a convenient sequence definition of continuity: \\(f: 
 
 <!---->
 
-Thus we have concluded that a manifold \\(M\\), in addition to being locally Euclidean, is also Hausdorff and 2nd countable. In fact, it has been shown /\*cite and say hard proof\*/ that if a topological space \\(X\\) is locally Euclidean, Hausdorff, and 2nd countable, then this topology arises from a manifold as defined above. Thus we can now provide a formal and modern definition of topological manifold.
+Thus we have concluded that a manifold \\(M\\), in addition to being locally Euclidean, is also Hausdorff and 2nd countable. In fact, it has been shown /\*cite and say hard proof\*/ that if a topological space \\(X\\) is locally Euclidean, Hausdorff, and 2nd countable, then this topology arises from some some topological manifold as defined extrinsically. In other words, the following intrinsic definition identifies precisely the same topological spaces as the extrinsic definition.
 
-**Def (Topological Manifold).** A topological space \\(X\\) is a *topological manifold* if it is locally Euclidean, Hausdorff, and 2nd countable.
+**Intrinsic definition of topological manifold.** A topological space \\(M\\) is a *topological manifold* if it is locally Euclidean, Hausdorff, and 2nd countable.
