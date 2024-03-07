@@ -13,7 +13,25 @@ done (green)
 
 ## Table of Contents
 
+#### Short term priority:
+* Wave front set in \\(\mathbb{R}^n\\)
+* Wave front set on manifolds.
+* Psi-DOs on manifolds.
+* Sobolev spaces on manifolds.
+* Basic spectral theory.
+* Basic ergodic theory.
+
 #### Fundamentals
+
+#### Linear Algebra
+
+#### Calculus
+* [inverse function theorem](calculus/inverse-function-theorem.html) <span style="color:red">(empty)</span>
+
+#### ODE Theory
+* [Existence Theorem](odes/existence.html) <span style="color:red">(empty)</span>
+* [Uniqueness Theorem](odes/uniqueness.html) <span style="color:red">(empty)</span>
+* [Smoothness Theorem](odes/smoothness.html) <span style="color:red">(empty)</span>
 
 #### Algebra
 * [spectral theorem](algebra/spectral-theorem.html) <span style="color:blue">(almost done)</span>.
@@ -21,21 +39,30 @@ done (green)
 * [wedge product](smooth-manifolds/wedge-product.html) <span style="color:red">(empty)</span>.
 
 #### Classical Analysis
-* [continuity](analysis/continuity.html) <span style="color:blue">(almost done)</span>.
+* [continuity](analysis/continuity.html) <span style="color:orange">(in progress)</span>.
 * [euler-lagrange](analysis/euler-lagrange.html) <span style="color:blue">(almost done)</span>.
 
 #### Measure Theory
+* [motivation](measure-theory/motivation.html) <span style="color:orange">(in progress)</span>
+* [Lebesgue measure](measure-theory/lebesgue-measure.html) <span style="color:red">(empty)</span>
+* [Properties of Lebesgue Measure](measure-theory/lebesgue-properties.html) <span style="color:red">(empty)</span>
+* [Measure spaces](measure-theory/measures.html) <span style="color:red">(empty)</span>
+* [Measurable functions](measure-theory/measurable-functions.html) <span style="color:red">(empty)</span>
+* [Integration](measure-theory/integration.html) <span style="color:red">(empty)</span>
 
 #### Functional Analysis
+* [function space motivation](functional-analysis/function-space-motivation.html) <span style="color:green">(rework)</span>
+
+* [\\(L^2\\) spaces](functional-analysis/l2-spaces.md) <span style="color:orange">(in progress)</span>
 
 #### Complex Analysis
 * [complex motivation](complex/complex-motivation.html) <span style="color:blue">(almost done)</span>.
-* [complex numbers](complex/complex-numbers.html) <span style="color:orangered">(in progress)</span>.
-* [complex functions](complex/complex-functions.html) <span style="color:orangered">(in progress)</span>.
+* [complex numbers](complex/complex-numbers.html) <span style="color:orange">(in progress)</span>.
+* [complex functions](complex/complex-functions.html) <span style="color:orange">(in progress)</span>.
 * [holomorphic functions](complex/holomorphic-functions.html) <span style="color:blue">(almost done)</span>.
 * [cauchy's theorem](complex/cauchys-thm.html) <span style="color:red">(empty)</span>.
-* [integration](complex/integration.html) <span style="color:orange">(outline)</span>.
-* [cauchy integral formula](complex/cauchy-integral-formula.html) <span style="color:orange">(outline)</span>.
+* [integration](complex/integration.html) <span style="color:orangered">(outline)</span>.
+* [cauchy integral formula](complex/cauchy-integral-formula.html) <span style="color:orangered">(outline)</span>.
 
 #### Topology
 * [topological spaces](topology/topological-space.html) <span style="color:green">(rework)</span>.
@@ -43,53 +70,73 @@ done (green)
 
 #### Topological Manifolds
 * [manifolds motivation](geometry/manifolds.html) <span style="color:blue">(almost done)</span>.
-* [topological manifolds](topological-manifolds/topological-manifold.html) <span style="color:orangered">(in progress)</span>.
+* [topological manifolds](topological-manifolds/topological-manifold.html) <span style="color:orange">(in progress)</span>.
 * [homotopy equivalence](topological-manifolds/homotopy-equivalence.html) <span style="color:red">(empty)</span>.
-* [fundamental group](topological-manifolds/fundamental-group.html) <span style="color:orangered">(in progress)</span>.
-* [covering spaces](topological-manifolds/covering-spaces.html) <span style="color:orangered">(in progress)</span>.
+* [fundamental group](topological-manifolds/fundamental-group.html) <span style="color:orange">(in progress)</span>.
+* [covering spaces](topological-manifolds/covering-spaces.html) <span style="color:orange">(in progress)</span>.
+
+#### Algebraic Topology
+* [homology](algebraic-topology/homology.html) <span style="color:red">(empty)</span>
+* [cohomology](algebraic-topology/cohomology.html) <span style="color:red">(empty)</span>
 
 #### Smooth Manifolds
-* [extrinsic definition](smooth-manifolds/extrinsic-definition.html) <span style="color:orangered">(in progress)</span>.
+* [extrinsic definition](smooth-manifolds/extrinsic-definition.html) <span style="color:orange">(in progress)</span>.
 * [intrinsic definition](smooth-manifolds/intrinsic-definition.html) <span style="color:blue">(almost done)</span>.
 * [tangent vectors](smooth-manifolds/tangent-vectors.html) <span style="color:blue">(almost done)</span>.
-* [tangent bundle](smooth-manifolds/tangent-bundle.html) <span style="color:orangered">(in progress)</span>.
-* [forms motivation](smooth-manifolds/forms-motivation.html) <span style="color:orangered">(in progress)</span>.
+* [tangent bundle](smooth-manifolds/tangent-bundle.html) <span style="color:orange">(in progress)</span>.
+* [forms motivation](smooth-manifolds/forms-motivation.html) <span style="color:orange">(in progress)</span>.
 * [exterior derivative motivation](smooth-manifolds/exterior-derivative-motivation.html) <span style="color:red">(empty)</span>.
 * [bundles](smooth-manifolds/bundles.html) <span style="color:red">(empty)</span>.
 
 #### Riemannian Manifolds
 * [riemannian manifolds](riemannian-manifolds/riemannian-manifolds.html) <span style="color:blue">(almost done)</span>.
+* [examples](riemannian-manifolds/examples.html) <span style="color:red">(empty)</span>
+* [lengths, angles, and areas](riemannian-manifolds/lengths-angles-area.html) <span style="color:orangered">(outline)</span>
+* [geodesics](riemannian-manifolds/geodesics.html) <span style="color:orange">(in progress)</span>.
+* [curvature motivation](riemannian-manifolds/curvature-motivation.html) <span style="color:orange">(in progress)</span>.
 * [riemannian metric](riemannian-manifolds/riemannian-metric.html) (REMOVE).
 * [sphere](riemannian-manifolds/sphere.html) (REMOVE).
-* [geodesics](riemannian-manifolds/geodesics.html) <span style="color:orangered">(in progress)</span>.
-* [curvature motivation](riemannian-manifolds/curvature-motivation.html) <span style="color:orangered">(in progress)</span>.
 
 #### Symplectic and Contact Geometry
+* [introduction](symplectic-geometry/introduction.html) <span style="color:lime">(done)</span>.
 
 #### Complex Manifold Theory
 
 #### Dynamics
+* [dynamical systems](dynamics/dynamical-systems.html)
+* [measure-preserving-system](dynamics/measure-preserving-system.html)
+* [ergodicity](dynamics/ergodic-theory.html)
 
 #### PDE Theory
 * [list of pdes](pdes/pdes.html) (REMOVE).
 
 * [dirichlet problem](pdes/dirichlet-problem.html) <span style="color:red">(empty)</span>.
-* [poisson equation](pdes/poisson-equation.html) <span style="color:orange">(outline)</span>.
-* [poisson boundary value problem](pdes/poisson-dirichlet-problem.html) <span style="color:orangered">(in progress)</span>.
-* [wave equation](pdes/wave-equation.html) <span style="color:orangered">(in progress)</span>.
-* [heat equation](pdes/heat-equation.html) <span style="color:orangered">(in progress)</span>.
+* [poisson equation](pdes/poisson-equation.html) <span style="color:orangered">(outline)</span>.
+* [poisson boundary value problem](pdes/poisson-dirichlet-problem.html) <span style="color:orange">(in progress)</span>.
+* [wave equation](pdes/wave-equation.html) <span style="color:orange">(in progress)</span>.
+* [heat equation](pdes/heat-equation.html) <span style="color:orange">(in progress)</span>.
 * [minimal surface equation](pdes/minimal-surface-eq.html) <span style="color:blue">(almost done)</span>.
 
-* [distributions](pdes/distributions.html) <span style="color:orange">(outline)</span>.
+* [distributions](pdes/distributions.html) <span style="color:orangered">(outline)</span>.
 * [elliptic regularity theorem](pdes/elliptic-regularity.html) <span style="color:red">(empty)</span>.
-* [pseudo differential operators](pdes/pdos.html) <span style="color:orangered">(in progress)</span>.
+* [pseudo differential operators](pdes/pdos.html) <span style="color:orange">(in progress)</span>.
+* [Sobolev motivation](pdes/sobolev-spaces.html) <span style="color:lime">(done)</span>
+
+#### PDE Theory on Manifolds
+* [differential operators on manifolds](pdes-on-manifolds/differential-operators.html) <span style="color:red">(empty)</span>
+* [symbols of differential operators](pdes-on-manifolds/symbols.html) <span style="color:red">(empty)</span>
+* [pseudodifferential operators on manifolds](pdes-on-manifolds/pseudodifferential-operators.html) <span style="color:red">(empty)</span>
+* [elliptic operators](pdes-on-manifolds/elliptic-operators.html) <span style="color:red">(empty)</span>
+* [elliptic regularity theorem](pdes-on-manifolds/elliptic-regularity.html) <span style="color:red">(empty)</span>
+
+* [Sobolev spaces on manifolds](pdes-on-manifolds/sobolev-spaces.html) <span style="color:red">(empty)</span>
 
 #### Mechanics
-* [rigid body dynamics](physics/rigid-body.html) <span style="color:orange">(outline)</span>.
-* [gravity](relativity/gravity.html) <span style="color:orange">(outline)</span>.
+* [rigid body dynamics](physics/rigid-body.html) <span style="color:orangered">(outline)</span>.
+* [gravity](relativity/gravity.html) <span style="color:orangered">(outline)</span>.
 
 #### Relativity
-* [special relativity](relativity/special-relativity.html) <span style="color:orangered">(in progress)</span>.
+* [special relativity](relativity/special-relativity.html) <span style="color:orange">(in progress)</span>.
 
 #### Statistical Mechanics
 
@@ -111,3 +158,4 @@ done (green)
 * uniformization theorem
 
 * elliptic regularity theorem
+* hodge theorem

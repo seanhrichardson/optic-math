@@ -28,13 +28,13 @@ To summarize, the lengths of tangent vectors and angles between tangent vectors 
 
 **Def. (Riemannian metric).** A *Riemannian metric* on a smooth manifold \\(M\\) is an inner product \\(g\_p: T\_pM \times T\_pM \to \mathbb{R}\\) for all \\(p \in M\\) that varies smoothly with \\(p\\) (for all smooth vector fields \\(X,Y\\) on \\(M\\), the function \\(g_p(X,Y): M \to \mathbb{R}\\) is smooth).
 
-Recall that inner products are covariant 2-tensors. Indeed, in our case the Riemannian metric is a bilinear map \\(g\_p: T\_pM \times T\_pM \to \mathbb{R}\\) and therefore, by universal property of the tensor product, can be interpreted as a linear function \\(g\_p: T\_pM \otimes T\_pM \to \mathbb{R}\\). Furthermore, because this function varies smoothly with time, this defines a smooth covariant 2-tensor field \\(g\\) on \\(M\\). This motivates the following alternate definition of the Riemannian metric, which makes our smooth manifold theory more useful.
+Given tangent vectors \\(v, w \in T\_pM\\), the inner product \\(g\_p(v,w)\\) is also denoted by \\(\langle v , w\rangle\_g\\). Similarly, the norm \\(\sqrt{g\_p(v,v)}\\) of a vector is often denoted by \\(\|v\|\_g\\). Recall that inner products are covariant 2-tensors. /\*smooth this out\*/ Indeed, in our case the Riemannian metric is a bilinear map \\(g\_p: T\_pM \times T\_pM \to \mathbb{R}\\) and therefore, by universal property of the tensor product, can be interpreted as a linear function \\(g\_p: T\_pM \otimes T\_pM \to \mathbb{R}\\). Furthermore, because this function varies smoothly with time, this defines a smooth covariant 2-tensor field \\(g\\) on \\(M\\). This motivates the following alternate definition of the Riemannian metric, which makes our smooth manifold theory more useful.
 
 **Def. (Riemannian metric).** A *Riemannian metric* on a smooth manifold \\(M\\) is a smooth, covariant 2-tensor field \\(g\\) whose value \\(g\_p\\) at each \\(p \in M\\) is an inner product on \\(T_pM\\).
 
 **Exercise.** Prove that both definitions of a Riemannian metric are equivalent.
 
-When a smooth manifold is given the extra structure of a Riemannian metric, we get a *Riemannian manifold* -- the object that the subject of *Riemannian geometry* studies.
+When a smooth manifold \\(M\\) is given the extra structure of a Riemannian metric \\(g\\), we get a *Riemannian manifold* -- the object that the subject of *Riemannian geometry* studies. This data is often written as the pair \\((M,g)\\).
 
 **Def. (Riemannian manifold).** A smooth manifold \\(M\\) together with a Riemannian metric \\(g\\) is called a *Riemannian manifold*.
 

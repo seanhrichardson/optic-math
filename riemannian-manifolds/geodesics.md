@@ -5,15 +5,54 @@ title: Geodesic Equation
 
 ## Geodesics
 
-One important geometric question still remains unanswered: 
+*Given two points \\(p,q \in M\\), what is the shortest path between \\(p\\) and \\(q\\)?*
 
-*Given a curve \\(\gamma(t)\\) on a Riemannian manifold, how do we know if it is straight?*
+The goal of this page is to discuss this geometric question. In exploring this question, we will come across a natural notion of "straight lines" which we call "geodesics".
 
-/\*...\*/
+#### Length Functional
+
+Our goal is, out of all paths \\(\gamma: [a,b] \to M\\) satisfying \\(\gamma(a) = p\\) \\(\gamma(b) = q\\), find one with minimal length (if it exists). We denote the length of such a curve \\(\gamma\\) by
+\\[
+    L(\gamma) = \int_a^b \|\dot{\gamma}(t)\|\_g dt = \int_a^b \sqrt{g(\dot{\gamma}(t), \dot{\gamma}(t))}dt.
+    \label{eq:length}
+    \tag{L}
+\\]
+This function \\(L\\) is called the *length functional* -- it takes as input a curve and outputs the length of the curve. Our goal is to minimize \\(L\\) and find a corresponding minimizing curve. We must be careful, however, for such a minimum might not necessarily exist! For example, consider the points \\(p = (1,0)\\) and \\(q = (-1,0)\\) in the punctured plane \\(\mathbb{R}^2 \smallsetminus \\{0\\}\\). Then we can find a path \\(\gamma\\) connecting \\(p\\) and \\(q\\) with length \\(L(\gamma)\\) arbitrarily close to \\(1\\), but a path with length precisely equal to \\(1\\) is impossible to achieve as \\(\gamma\\) must avoid the hole at \\((0,0)\\). Furthermore, even if such a minumum does exist, it might not be unique. For example, consider the circle \\(\mathbb{S}^1 \subset \mathbb{R}^2\\) and again take \\(p = (1,0)\\) and \\(q = (-1,0)\\). Then there are two minimizing curves of length \\(\pi\\) connecting \\(p\\) and \\(q\\): one traversing the top of the circle and one traversing the bottom.
+
+/\*pictures for above examples\*/
+
+**Exercise.** Verify that one can find a path \\(\gamma: [a,b] \to \mathbb{R}^2 \smallsetminus \{0\}\\) connecting \\((1,0)\\) and \\((-1,0)\\) of length arbitrarily close to \\(1\\), but no path of length \\(1\\) exists.
 
 #### Energy Functional
 
-Given a curve \\(\gamma(t)\\) over 
+The square root in the length functional (\ref{eq:length}) is annoying to deal with. Thus we instead consider the *energy functional*
+\\[
+    E(\gamma) 
+    = \frac{1}{2} \int_a^b \|\dot{\gamma}(t)\|^2\_g dt 
+    = \frac{1}{2} \int\_a^b g(\dot{\gamma}(t), \dot{\gamma}(t))dt.
+    \label{eq:energy}
+    \tag{E}
+\\]
+Note that if a curve \\(\gamma\\) has constant speed \\(\|\dot{\gamma}(t)\| = c\\), then we have the following explicit relationship between energy and length:
+\\[
+    E(\gamma) 
+    = \frac{1}{2} (b-a) \cdot c
+    = \frac{1}{2} \frac{L(\gamma)^2}{b-a}.
+\\]
+Thus, when restricting to geodesics of constant speed, a curve minimizes the energy functional if and only if it minimizes the length functional. We will find later that a minimizer to the energy functional must necessarily have constant speed, so later we can drop this restriction in the "only if" direction.
+
+#### Calculus of Variations
+
+We have found that finding the shortest path between two points \\(p,q \in M\\) involves studying global minimizers to the energy functional (\ref{eq:energy}). As a first step, let's assume \\(p,q\\) are close enough so that they are in the same coordinate chart \\((x^i)\\). Furthermore, we will start by finding *local minimizers* to the energy functional (\ref{eq:energy}). 
+
+/\*what is a local minimizer? ...\*/
+
+
+PLAN (is this the best order?)
+* State geodesic equations by citing Euler-Lagrange.
+* Have an optional expandable derivation from scratch.
+* Have an example derivation for straight lines in the plane.
+
 
 #### Straight Lines in the Plane
 
@@ -88,7 +127,8 @@ where the functions \\(\Gamma_{ij}^k\\) are the *Christoffel symbols* and are gi
     \Gamma_{ij}^k = \frac{1}{2}g^{kl}(\partial_i g_{jl} + \partial_j g_{il} - \partial_l g_{ij})
 \\]
 
-#### Example: geodesics on the sphere
+
+#### Example: geodesics on the sphere (TODO: MOVE EVERYTHING BELOW TO SEPARATE PAGES)
 Computing geodesics on the sphere. We can express a path \\(\gamma: [a,b] \to \mathbb{S}^2\\) in coordinates by \\(\gamma(t) = (\theta(t), \phi(t))\\). First compute the Christoffel symbols /\*TODO: SHOW (hidden?) COMPUTATIONS FOR THESE\*/
 
 Recall \\(g = d\phi^2 + \sin\phi^2 d\theta^2\\)
