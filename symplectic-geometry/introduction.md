@@ -39,11 +39,17 @@ In particular, the evolution of the system is determined by the flow \\(\theta(t
 
 **Exercise.** Verify the above equality and check this equality uniquely characterizes \\(X_H\\).
 
-This observation allows us to study the flows of such mechanical systems in the following setting. We take a \\(2n\\)-dimensional manifold \\(N\\), some Hamiltonian \\(H: N \to \mathbb{R}\\), and some \\(2\\)-form \\(\omega\\), which we hope generated a vector field by the rule (\ref{eq:vf-rule}). However, this rule only defines a unique vector field if \\(\omega\\) is "symplectic" as defined below.
+This observation allows us to study the flows of such mechanical systems in the following setting. We take a \\(2n\\)-dimensional manifold \\(N\\), some Hamiltonian \\(H: N \to \mathbb{R}\\), and some \\(2\\)-form \\(\omega\\), which we hope generated a vector field by the rule (\ref{eq:vf-rule}). However, this rule only defines a unique vector field if \\(\omega\\) is "nondegenerate" as defined below.
 
-**Def (symplectic form).** A 2-form \\(\omega\\) on a \\(2n\\)-dimensional smooth manifold is called *symplectic* if the induced map \\(\widehat{\omega}_p: T\_p \to T^\*\_pN\\) defined by \\(v \mapsto v \lrcorner\ \omega_p\\) is an isomorphism for all \\(p \in N\\).
+**Def (non-degenerate form).** A 2-form \\(\omega\\) on a \\(2n\\)-dimensional smooth manifold is called *nondegenerate* if the induced map \\(\widehat{\omega}_p: T\_p \to T^\*\_pN\\) defined by \\(v \mapsto v \lrcorner\ \omega_p\\) is an isomorphism for all \\(p \in N\\)
 
-Thus a general setting for studying these systems is given by the notion of a "symplectic manifold" as defined below.
+Furthermore, the \\(2\\)-form \\(\omega = \sum_{i} dx^i \wedge d\xi^i\\) that encodes this structure is also closed, so we are often interested in "symplectic forms" defined on "symplectic manifolds" defined as follows.
+
+/\*todo: understand why closed is useful/necessary and include this in the motivation. For instance, can we still get a vector field and dynamics if the form isn't closed?\*
+
+**Exercise.** Compute \\(d\left(\sum_{i} dx^i \wedge d\xi^i\right) = 0\\) to verify this form is closed.
+
+**Def (symplectic form).** A *symplectic form* is a closed, nondegenerate 2-form \\(\omega\\) on a \\(2n\\)-dimensional smooth manifold.
 
 **Def (symplectic manifold).** A *symplectic manifold* is a \\(2n\\)-dimensional smooth manifold \\(N\\) together with a particular choice of a symplectic 2-form \\(\omega\\) on \\(N\\).
 

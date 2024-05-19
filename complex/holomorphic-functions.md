@@ -75,4 +75,6 @@ We are now equipped to compare holomorphicity of functions \\(\mathbb{C} \to \ma
 A quick computation confirms the linear map \\(h^T \mapsto DF((x\_0,y\_0))h^T\\) on \\(\mathbb{R}^2\\) corresponds to the map \\(h \mapsto f'(z\_0)h\\). Therefore, as \\(h \to 0\\), this \\(DF((x\_0,y\_0))\\) satisfies (\ref{eq:diff}), so the Jacobian exists, hence the partial derivatives exist, and in particular \\(p = \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}\\) and \\(q = \frac{\partial v}{\partial x} = -\frac{\partial u}{\partial y}\\), so the Cauchy-Riemann equations are satisfied. 
 <div style="text-align: right"> \(\square\) </div>
 
+*The Cauchy-Riemann equations simply encode that the derivatative is a complex number: the Jacobi matrix should represent multiplication by a complex number.*
+
 /\*discuss converse... TODO do multivariable real analysis on this site\*/

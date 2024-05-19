@@ -24,6 +24,8 @@ done (green)
 #### Fundamentals
 
 #### Linear Algebra
+* [tensors](linear-algebra/tensors.html) <span style="color:green">(rework)</span>.
+* [symplectic forms](linear-algebra/symplectic-forms.html) <span style="color:red">(empty)</span>
 
 #### Calculus
 * [inverse function theorem](calculus/inverse-function-theorem.html) <span style="color:red">(empty)</span>
@@ -35,7 +37,6 @@ done (green)
 
 #### Algebra
 * [spectral theorem](algebra/spectral-theorem.html) <span style="color:blue">(almost done)</span>.
-* [tensors](algebra/tensors.html) <span style="color:green">(rework)</span>.
 * [wedge product](smooth-manifolds/wedge-product.html) <span style="color:red">(empty)</span>.
 
 #### Classical Analysis
@@ -52,17 +53,25 @@ done (green)
 
 #### Functional Analysis
 * [function space motivation](functional-analysis/function-space-motivation.html) <span style="color:green">(rework)</span>
+* [Hahn-Banach](functional-analysis/hahn-banach.html) <span style="color:red">(empty)</span>
 
-* [\\(L^2\\) spaces](functional-analysis/l2-spaces.md) <span style="color:orange">(in progress)</span>
+* [\\(L^2\\) spaces](functional-analysis/l2-spaces.html) <span style="color:orange">(in progress)</span>
+
+* [Compact Operators](functional-analysis/compact-operators.html) <span style="color:red">(empty)</span>
+* [Fredholm Operators](functional-analysis/fredholm-operators.html) <span style="color:red">(empty)</span>
+
+* [Spectral Theorem](functional-analysis/spectral-theorem.html) <span style="color:red">(empty)</span>
 
 #### Complex Analysis
 * [complex motivation](complex/complex-motivation.html) <span style="color:blue">(almost done)</span>.
 * [complex numbers](complex/complex-numbers.html) <span style="color:orange">(in progress)</span>.
 * [complex functions](complex/complex-functions.html) <span style="color:orange">(in progress)</span>.
 * [holomorphic functions](complex/holomorphic-functions.html) <span style="color:blue">(almost done)</span>.
-* [cauchy's theorem](complex/cauchys-thm.html) <span style="color:red">(empty)</span>.
 * [integration](complex/integration.html) <span style="color:orangered">(outline)</span>.
+* [cauchy's theorem](complex/cauchys-thm.html) <span style="color:red">(empty)</span>.
 * [cauchy integral formula](complex/cauchy-integral-formula.html) <span style="color:orangered">(outline)</span>.
+* [analytic functions](complex/analytic-functions.html) <span style="color:red">(empty)</span>.
+
 
 #### Topology
 * [topological spaces](topology/topological-space.html) <span style="color:green">(rework)</span>.
@@ -120,7 +129,9 @@ done (green)
 * [distributions](pdes/distributions.html) <span style="color:orangered">(outline)</span>.
 * [elliptic regularity theorem](pdes/elliptic-regularity.html) <span style="color:red">(empty)</span>.
 * [pseudo differential operators](pdes/pdos.html) <span style="color:orange">(in progress)</span>.
-* [Sobolev motivation](pdes/sobolev-spaces.html) <span style="color:lime">(done)</span>
+* [Sobolev motivation](pdes/sobolev-motivation.html) <span style="color:lime">(done)</span>
+* [Sobolev spaces](pdes/sobolev-spaces.html) <span style="color:red">(empty)</span>
+
 
 #### PDE Theory on Manifolds
 * [differential operators on manifolds](pdes-on-manifolds/differential-operators.html) <span style="color:red">(empty)</span>
