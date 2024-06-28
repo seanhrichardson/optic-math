@@ -17,13 +17,11 @@ On this page we will show how the Riemannian metric allows us to answer (1), (2)
 
 #### Angles
 
-/\*could make this more "precisely motivated" by comparing to extrinsic embeded Riemannian manifolds...\*/
-
-Suppose we have two smooth curves \\(\alpha: [a\_0, a\_1] \to M\\) and \\(\beta: [b\_0, b\_1] \to M\\) that intersect at \\(\alpha(\widetilde{a}) = p = \beta(\widetilde{b})\\). Then what angle do they intersect at? The motivation behind the definition of the Riemannian metric is that we define this angle to be the angle between the *tangent vectors* \\(\alpha'(\widetilde{a}), \beta'(\widetilde{b}) \in T\_pM\\). The Riemannian metric \\(g\\) offers an inner product on \\(T\_pM\\) which, like any inner product, gives a notion of angles. In particular, the angle \\(\theta\\) between \\(\alpha'(\widetilde{a}), \beta'(\widetilde{b})\\) is given by
+Suppose we have two smooth curves \\(\alpha: [a\_0, a\_1] \to M\\) and \\(\beta: [b\_0, b\_1] \to M\\) that intersect at \\(\alpha({a}) = p = \beta({b})\\). Then what angle do they intersect at? The motivation behind the definition of the Riemannian metric is that we define this angle to be the angle between the *tangent vectors* \\(\alpha'({a}), \beta'({b}) \in T\_pM\\). The Riemannian metric \\(g\\) offers an inner product on \\(T\_pM\\) which, like any inner product, gives a notion of angles. In particular, the angle \\(\theta\\) between \\(\alpha'({a}), \beta'({b})\\) is given by
 \\[
-    \cos\theta = \frac{\langle \alpha'(\widetilde{a}) , \beta'(\widetilde{b}) \rangle\_g}{\|\alpha'(\widetilde{a})\|_g \|\beta'(\widetilde{b})\|_g}.
+    \cos\theta = \frac{\langle \alpha'({a}) , \beta'({b}) \rangle\_g}{\|\alpha'({a})\|_g \|\beta'({b})\|_g}.
 \\]
-We consider this angle \\(\theta\\) given above to be the angle thata the curves \\(\alpha\\) and \\(\beta\\) intersect at.
+We consider this angle \\(\theta\\) given above to be the angle that the curves \\(\alpha\\) and \\(\beta\\) intersect at.
 
 #### Lengths
 

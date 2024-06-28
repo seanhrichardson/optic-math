@@ -3,62 +3,60 @@ layout: page
 title: Special Relativity
 ---
 
-/\*maybe use YOUR coordinates and MY coordinates\*/
-
-/\*avoid using coordinate notation (...). Instead, use \\(v^i\partial_i\\)\*/
-
 ## Special Relativity
 
-/\*start with just \\(\mathbb{R}^{1+1}\\)... more intuiticve and allows for visuals.\*/
+#### A problem with intuition
 
-/\*briefly mention phenomenon of special relativity here\*/
+Suppose you are floating in space: isolated and not accelerating. Then suppose you see me rapidly approaching you at speed \\(v\\). You shine a flashlight in my direction: how fast do I measure the light coming out of your flashlight moving? Experimental evidence confirms that both you and me will measure the light emiting from your flashlight to be the same speed: about \\(299,792,458\\) m/s, which we call \\(c\\). However, it is customary (and convenient) for mathematicians to choose coordinates so that \\(c = 1\\). But this is a problem: if I am rapidly moving towards you and you emit something moving at the speed of light, shouldn't I measure that this moves faster than the speed of light?
 
-#### Spacetime
-/\*explain basic idea of spacetime, this will be centered around interactive visuals...\*/
+Let's describe this problem more precisely. We each experience various *events*: particular locations in space occuring at a particular time. However, we have two different ways of describing the places and times of these events. You have coordinates \\((t,x,y,z)\\) to indicate an event at point \\((x,y,z)\\) and ocurring at time \\(t\\). You consider yourself to be staionary and at position \\(x = y = z = 0\\), so from your perspective, you follow the \\(t\\) axis in your coordinates. However, I also consider myself to be stationary and I consider you to be moving quickly towards me. So I have my own coordinate system \\((\widetilde{t}, \widetilde{x}, \widetilde{y}, \widetilde{z})\\) where my own position follows the \\(\widetilde{t}\\) axis. For simplicity, suppose you have choosen coordinates so that it appears I am moving towards you in only the \\(x\\) direction, and I have choosen coordinates so that it appears you are moving towards me in only the \\(\widetilde{x}\\) direction. In this case, you compute the speed of the shining light by \\({\Delta x}/{\Delta t}\\) and I compute the speed of the light by \\({\Delta \widetilde{x}}/{\Delta \widetilde{t}}\\). However, the problem is that you intuitively expect my coordinate system to be related to your coordinate system by the simple relation \\((\widetilde{t}, \widetilde{x}, \widetilde{y}, \widetilde{z}) = (t, x+tv, y, z)\\); however, this intuition is *not true* for it incorrectly predicts that I measure the speed of light to be
+\\[
+    \frac{\Delta \widetilde{x}}{\Delta \widetilde{t}} = \frac{\Delta x + v\Delta t}{\Delta t} = c + v > c.
+\\]
+Therefore, the relation between your coordinates \\((t,x,y,z)\\) and my coordinates \\((\widetilde{t}, \widetilde{x}, \widetilde{y}, \widetilde{z})\\) is not quite so intuitive. In order to correctly discover this relation, we should carefully lay out some axioms so that we are not fooled by incorrect intuition.
 
-/\*mention units are taken so speed of light is 1 up here?\*/
-
-/\*list some implicit assumptions about inertial observers up here?\*/
-
+/\*possibly some Lorentz transformation visuals before formalizing...\*/
 
 #### Axioms
 
-Suppose you are an inertial observer using coordinates \\((t,x,y,z)\\).
-
-Many other coordinates \\((\tilde{t},\tilde{x},\tilde{y},\tilde{z})\\) are possible.
-
-We wish to understand what other coorinate systems \\((\tilde{t},\tilde{x},\tilde{y},\tilde{z})\\) are possible.
-
-Any other coordinate systems must obey some axioms:
+We both experience the world of events, which is a vector space isomorphic to \\(\mathbb{R}^{3+1}\\) (or at least we consider this to be a linear approximation). Then different inertial observers close to eachother experience the same space \\(\mathbb{R}^{3+1}\\) of events, but each inertial observer chooses different coordinate axes so that coordinates \\((t,x,y,z)\\) have different meanings. However, all coordinate systems must obey some axioms:
 1. All inertial observers measure the same speed of light \\(c\\).
-2. If we observe an inertial observer moving at speed \\(\|v\|\\) relative to us, then they observe us moving at the same speed \\(\|v\|\\) relative to them.
-3. The change of coordinate map between inertial observers is linear. /\*justify? ... this will be ditched in GR ... maybe make this linearization instead?\*/  /\*also add vector space axiom?\*/ /\*maybe just use linearization of manifold? maybe just say this is a linear approximation?\*/
+2. If an inertial observer is moving at speed \\(\|v\|\\) relative to you, then they observe you moving at the same speed \\(\|v\|\\) relative to them.
+3. The change of coordinate map between inertial observers is linear (or at least we can consider a linear approximation).
+
+For an observer using coordinates \\((t,x,y,z)\\) we let the vector \\(\partial\_t\\) be the unit vector in the direction of the \\(t\\)-axis with respect to these coordinates: this observer moves in the direction \\(\partial\_t\\) along the \\(t\\)-axis. Similarly, \\(\partial\_x\\), \\(\partial\_y\\), and \\(\partial\_z\\) are the unit directions along the \\(x\\), \\(y\\), and \\(z\\) axes respectively.
 
 #### Invariance of the Interval
 
-Let's use these axioms to make some deductions about what coordinate systems are possible /\*reframe: want an invariant between coordinate systems...\*/, beginning by using the univsersality of the speed of light. Indeed, by axiom (1), according to your coordinates \\((t,x,y,z)\\), you will measure light in the following set (remember we chose units so that the speed of light \\(c\\) is \\(1\\)).
+/\*use \\(v^i \partial\_i\\) when appropriate\*/
+
+/\*also do not assume set of events is a vector space... This just needs to be topologically homeomorphic to \\(\mathbb{R}^{3+1}\\)\*/
+
+Let's use these axioms to make some deductions about how our coordinate systems must be related. Indeed, by axiom (1), according to your coordinates \\((t,x,y,z)\\), you will measure light in the following set (remember we chose units so that the speed of light \\(c\\) is \\(1\\)).
 \\[
     Z = \left\\{(\Delta t,\Delta x, \Delta y, \Delta z) : \frac{\Delta x^2 + \Delta y^2 + \Delta z^2}{\Delta t^2} = c = 1 \right\\}.
 \\]
 We can rewrite this as the zero set 
 \\[Z = \\{(\Delta t,\Delta x, \Delta y, \Delta z) : -\Delta t^2 + \Delta x^2 + \Delta y^2 + \Delta z^2 = 0\\}.\\]
 
-By the same reasoning, any inertial observer using coordinates \\((\tilde{t},\tilde{x},\tilde{y},\tilde{z})\\) will measure light in the zero set 
+By the same reasoning, if I am an inertial observer using coordinates \\((\tilde{t},\tilde{x},\tilde{y},\tilde{z})\\), then I will measure light in the zero set 
 \\[\tilde{Z} = \\{(\Delta \tilde{t},\Delta \tilde{x}, \Delta \tilde{y}, \Delta \tilde{z}) : - \Delta \tilde{t}^2 + \Delta \tilde{x}^2 + \Delta \tilde{y}^2 + \Delta \tilde{z}^2 = 0\\}.\\]
 
-The sets \\(Z\\) and \\(\tilde{Z}\\) both describe the same region of the vector space that light will be observered, they were simply defined using different coordinates; that is, we have the set equality \\(\tilde{Z} = Z\\), which is a substantial restriction on the coordinates \\((\tilde{t},\tilde{x},\tilde{y},\tilde{z})\\). A convenient way to rewrite this findings is by defining a function \\(m: \mathbb{R}^{3+1} \times \mathbb{R}^{3+1} \to \mathbb{R}\\) in our coordinates \\((t,x,y,z)\\) as
+The sets \\(Z\\) and \\(\tilde{Z}\\) both describe the same region of the vector space that light will be observered, they were simply defined using different coordinates; that is, we have the set equality \\(\tilde{Z} = Z\\), which is a substantial restriction on how our coordinates can be related. A convenient way to rewrite this finding is by defining a function \\(m: \mathbb{R}^{3+1} \times \mathbb{R}^{3+1} \to \mathbb{R}\\) in your coordinates \\((t,x,y,z)\\) as
 \\[
     m((t\_1,x\_1,y\_1,z\_1),(t\_2,x\_2,y\_2,z\_2)) = -t\_1t\_2 + x\_1x\_2 + y\_1y\_2 + z\_1z\_2,
 \\]
-and defining a function \\(\tilde{m}: \mathbb{R}^{3+1} \times \mathbb{R}^{3+1} \to \mathbb{R}\\) in the other inertial observer's coordinates \\((\tilde{t},\tilde{x},\tilde{y},\tilde{z})\\) as
+and defining a function \\(\tilde{m}: \mathbb{R}^{3+1} \times \mathbb{R}^{3+1} \to \mathbb{R}\\) in my coordinates \\((\tilde{t},\tilde{x},\tilde{y},\tilde{z})\\) as
 \\[
     \tilde{m}((\tilde{t}\_1,\tilde{x}\_1,\tilde{y}\_1,\tilde{z}\_1),(\tilde{t}\_2,\tilde{x}\_2,\tilde{y}\_2,\tilde{z}\_2)) = -\tilde{t}\_1\tilde{t}\_2 + \tilde{x}\_1\tilde{x}\_2 + \tilde{y}\_1\tilde{y}\_2 + \tilde{z}\_1\tilde{z}\_2.
 \\]
-Then our previous result can be re-written as
+Then our previous result \\(Z = \widetilde{Z}\\) can be re-written as
 \\[
-    \\{v: m(v,v) = 0\\} = \\{\tilde{v}: \tilde{m}(\tilde{v}, \tilde{v}) = 0\\}.
+    \\{v \in \mathbb{R}^{3+1}: m(v,v) = 0\\} = \\{v \in \mathbb{R}^{3+1}: \widetilde{m}(v,v) = 0\\}.
 \\]
-In other words, the zero sets of \\(m(v,v)\\) and \\(\tilde{m}(\tilde{v},\tilde{v})\\) are identical. Rewritting our findings in this way is helpful because we can apply the result of the following exercise.
+In other words, the zero sets of \\(m(v,v)\\) and \\(\widetilde{m}(v,v)\\) are identical. Rewritting our findings in this way is helpful because we can apply the result of the following exercise.
+
+/\*explain why quadratic form determines bilinear form\*/
 
 **Exercise.**
 /\*TODO: bilinear forms with same zeroes will be scalar multiples.\*/
@@ -66,12 +64,10 @@ In other words, the zero sets of \\(m(v,v)\\) and \\(\tilde{m}(\tilde{v},\tilde{
 **Solution.**
 /\*TODO.\*/
 
-By the above exercise, we conclude that there is some constant \\(\alpha\\) so that \\(m(v,v) = \alpha \tilde{m}(Lv, Lv)\\) for all \\(v\\). We will show that \\(\alpha = 1\\) using axiom (2). Indeed, consider the vectors \\(\partial_t\\) and \\(\partial_{\tilde{t}}\\). In our coordinates \\((t,x,y,z)\\) we can measure the speed \\(|v|\\) between us and the other inertial observer \\(\partial_t = (t_1,x_1,y_1,z_1)\\) by 
-\\[\|v\|^2 = \frac{x_1^2+y_1^2+z_1^2}{t_1^2}\\]
+By the above exercise, we conclude that there is some constant \\(\alpha\\) so that \\(m(v,v) = \alpha \tilde{m}(v, v)\\) for all \\(v\\). I now argue that in fact \\(\alpha = 1\\). Indeed, by the principle of relativity, the constant \\(\alpha\\) can depend only on the relative speed between the coordinate systems \\((t,x,y,z)\\) and \\((\widetilde{t},\widetilde{x},\widetilde{y},\widetilde{z}).\\) Thus if I, using coordinates \\((\widetilde{t},\widetilde{x},\widetilde{y},\widetilde{z})\\), carried out the same computation from my point of view, I should conclude \\(\widetilde{m}(v,v) = \alpha m(v,v)\\) for the same constant \\(\alpha\\). This can only be the case if \\(\alpha = 1\\).
 
-??????????? actually this might not work ???????????
+/\*above is a little hand-wavy. try to make formal argument using (2)\*/
 
-/\*OLD STUFF BELOW\*/
 #### Lorentz Transformations
 /\*define Lorentz transformations as all coordinate transformations.\*/
 

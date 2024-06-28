@@ -11,8 +11,7 @@ title: Calabi Conjecture
 
 #### Complex Manifold Theory
 
-* Complex Manifold Motivation
-* Complex Manifolds
+* Complex Manifolds (motivation is generalization of Riemann surfaces?)
 * Complexified Tangent and Cotangent Bundles
 * Almost complex structure
 
@@ -41,5 +40,7 @@ title: Calabi Conjecture
 Necessary smooth manifold theory
 
 Necessary vector bundle theory
+
+* Complexification
 
 

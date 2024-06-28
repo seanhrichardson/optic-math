@@ -5,7 +5,7 @@ title: Geodesic Equation
 
 ## Geodesics
 
-*Given two points \\(p,q \in M\\), what is the shortest path between \\(p\\) and \\(q\\)?*
+*Given points \\(p\\) and \\(q\\) on a Riemannian maifold \\(M\\), what is the shortest path between \\(p\\) and \\(q\\)?*
 
 The goal of this page is to discuss this geometric question. In exploring this question, we will come across a natural notion of "straight lines" which we call "geodesics".
 
@@ -39,26 +39,82 @@ Note that if a curve \\(\gamma\\) has constant speed \\(\|\dot{\gamma}(t)\| = c\
     = \frac{1}{2} (b-a) \cdot c
     = \frac{1}{2} \frac{L(\gamma)^2}{b-a}.
 \\]
-Thus, when restricting to geodesics of constant speed, a curve minimizes the energy functional if and only if it minimizes the length functional. We will find later that a minimizer to the energy functional must necessarily have constant speed, so later we can drop this restriction in the "only if" direction.
+Thus, when restricting to curves of constant speed, a curve minimizes the energy functional if and only if it minimizes the length functional. We will find later that a minimizer to the energy functional must necessarily have constant speed, so later we can drop this restriction in the "only if" direction.
 
 #### Calculus of Variations
 
-We have found that finding the shortest path between two points \\(p,q \in M\\) involves studying global minimizers to the energy functional (\ref{eq:energy}). As a first step, let's assume \\(p,q\\) are close enough so that they are in the same coordinate chart \\((x^i)\\). Furthermore, we will start by finding *local minimizers* to the energy functional (\ref{eq:energy}). 
+We have found that finding the shortest path between two points \\(p,q \in M\\) involves studying global minimizers to the energy functional (\ref{eq:energy}). As a first step, let's assume \\(p,q\\) are close enough so that they are in the same coordinate chart \\((x^i)\\). Furthermore, we will start by finding *local minimizer* to the energy functional (\ref{eq:energy}). To be precise, a curve \\(\gamma(t) = (x^1(t), \cdots, x^n(t))\\) in this context is a local minimizer of the energy functional if for any choice of smooth functions \\(f^i: \mathbb{R} \to \mathbb{R}\\) and small deviation curve \\(\gamma\_{\varepsilon} = (x^1(t) + \varepsilon f^1(t), \cdots, x^n(t) + \varepsilon f^n(t))\\), then \\(E(\gamma) \leq E(\gamma\_{\varepsilon})\\) for small \\(\varepsilon\\).
 
-/\*what is a local minimizer? ...\*/
+We will see that a curve in local coordinates \\(\gamma(t) = (x^1(t), \cdots, x^n(t))\\) is a critical point of the energy functional exactly when
+\\[
+    \ddot{x}^k + \sum_{ij} \frac{1}{2} g^{kl} \left(\frac{\partial g_{lj}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l}\right)\dot{x}^i\dot{x}^j = 0 \quad \text{ for all } k.
+    \label{eq:geodesic}
+    \tag{G}
+\\]
+This system of differential equations (\ref{eq:geodesic}) is called the *geodesic equation*, which we will now derive.
 
+#### Derivation from Scratch
 
-PLAN (is this the best order?)
-* State geodesic equations by citing Euler-Lagrange.
-* Have an optional expandable derivation from scratch.
-* Have an example derivation for straight lines in the plane.
+/\*TODO: follow Iva's notes\*/
 
+#### Derivation using Euler-Lagrange
 
-#### Straight Lines in the Plane
+For those familiar with the Euler-Lagrange equation /\*link\*/, we can use this result to derive the geodesic equation more quickly. Indeed, in this case our Lagrangian \\(\mathcal{L}\\) is
+\\[
+    \mathcal{L}(\gamma) = \frac{1}{2}g(\dot{\gamma}, \dot{\gamma}) = \frac{1}{2}g\_{ij}\dot{x}^i\dot{x}^j.
+\\]
+By Euler-Lagrange, the critical points of the energy functional are precisely those curves \\(\gamma(t) = (x^1(t), \cdots, x^n(t))\\) that satisfy the *Euler-Lagrange equation*
+\\[
+    \frac{\partial \mathcal{L}}{\partial x^l}(\gamma(t)) 
+    + \frac{d }{d t} \frac{\partial \mathcal{L}}{\partial \dot{x}^l}(\gamma(t)) = 0
+    \quad \text{for all } l
+\\]
+Thus all we must do is compute each term individually. Indeed, the first term simpliefies to
+\\[
+\begin{align}
+    \frac{\partial \mathcal{L}}{\partial x^l}(\gamma(t)) 
+    = \frac{\partial }{\partial x^l}\left(\frac{1}{2} g\_{ij} \dot{x}^i \dot{x}^j\right)
+    = \frac{1}{2}\frac{\partial g\_{ij}}{\partial x^l} \dot{x}^i\dot{x}^j.
+\end{align}
+\\]
+Then the second term simplifies to
+\\[
+\begin{align}
+    \frac{d }{d t} \frac{\partial \mathcal{L}}{\partial \dot{x}^l}(\gamma(t))
+    &= \frac{d }{d t} \frac{\partial}{\partial \dot{x}^l}\left(\frac{1}{2} g\_{ij} \dot{x}^i \dot{x}^j\right)\\\\\
+    &= \frac{1}{2}\frac{d }{d t}(g\_{il}\dot{x}^i) \\\\\
+    &= \frac{\partial g\_{il}}{\partial x^j} \frac{d x^j}{d t}\dot{x}^i + g\_{il}\ddot{x}^i\\\\\
+    &= \frac{\partial g\_{il}}{\partial x^j} \dot{x}^i\dot{x}^j + g\_{il}\ddot{x}^i.
+\end{align}
+\\]
+Combining our findings by substituting these expressions into the Euler-Lagrange equation (multiplied by \\(-1\\)), then rearranging we get
+\\[
+\begin{align}
+   0 &= -\frac{1}{2}\frac{\partial g\_{ij}}{\partial x^l} \dot{x}^i\dot{x}^j
+    + \frac{\partial g\_{il}}{\partial x^j} \dot{x}^i\dot{x}^j + g\_{il}\ddot{x}^i\\\\\
+    &= g\_{il}\ddot{x}^i + \frac{1}{2}\left\(\frac{\partial g\_{lj}}{\partial x^i} + \frac{\partial g\_{il}}{\partial x^j} -\frac{\partial g\_{ij}}{\partial x^l}\right\) \dot{x}^i\dot{x}^j.
+\end{align}
+\\]
+Applying the inverse matrix \\(g^{kl}\\) to both sides yields the geodesic equation
+\\[
+    \ddot{x}^k + \frac{1}{2}g^{kl}\left(\frac{\partial g_{lj}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l}\right)\dot{x}^i\dot{x}^j = 0.
+\\]
+
+#### Definition of Geodesics
+A curve \\(\gamma(t)\\) is a *geodesic* if, when written in any local coordinates \\(\gamma(t) = (x^1(t), \cdots, x^n(t))\\), it locally satisfies the *geodesic equations*
+\\[
+    \ddot{x}^k(t) + \dot{x}^i(t)\dot{x}^j(t)\Gamma_{ij}^k(x(t)) = 0, \quad 1 \leq k \leq n
+\\]
+where the functions \\(\Gamma_{ij}^k\\) are the *Christoffel symbols* and are given in coordinates by
+\\[
+    \Gamma_{ij}^k = \frac{1}{2}g^{kl}(\partial_i g_{jl} + \partial_j g_{il} - \partial_l g_{ij})
+\\]
+
+#### Example: Straight Lines in the Plane
 
 Consider a curve \\(\gamma(t) = (x(t), y(t))\\) on \\(\mathbb{R}^2\\) with \\(a \leq t \leq b\\). Now we consider a small pertubation \\(\gamma_{\varepsilon}(t)\\) of this curve that still has the same endpoints. One way to write such a small pertubation is \\(\gamma\_{\varepsilon}(t) = ((x(t)+\varepsilon f(t), y(t) + \varepsilon g(t))\\) for any choice of smooth functions \\(f(t)\\) and \\(g(t)\\) that satisfy \\(f(a) = f(b) = 0\\) and \\(g(a) = g(b) = 0\\). This last condition is to ensure \\(\gamma_{\varepsilon}(t)\\) has the same endpoints: \\(\gamma_{\varepsilon}(a) = \gamma(a)\\\) and \\(\gamma_{\varepsilon}(b) = \gamma(b)\\). 
 
-Then
+/\*TODO: finish this\*/
 
 /\*change notation above to go with below\*/
 
@@ -90,104 +146,7 @@ Therefore
 \\[
     0 = \int_a^b \ddot{x}\_{\varepsilon} \frac{\partial x}{\partial \varepsilon} dt + \int_a^b \ddot{y}\_{\varepsilon} \frac{\partial y}{\partial \varepsilon} dt
 \\]
+
 /\*finish explanation\*/
-
-#### Straight Lines on a Manifold
-Studying constant-speed curves \\(\gamma: [a,b] \to M\\) that are critical values of the Energy functional
-\\[
-    E(\gamma) 
-    = \frac{1}{2}\int_{a}^b\|\dot{\gamma}^2\|\_g dt
-    = \frac{1}{2}\int_{a}^b g_{ij} \frac{\partial x^i}{\partial t} \frac{\partial x^j}{\partial t}dt
-\\]
-That is, we require
-\\[
-    \left.\frac{d E(\gamma_{\varepsilon})}{d \varepsilon}\right\|\_{\varepsilon = 0} = 0.
-\\]
-The following computation yields an equivalent condition.
-\\[
-    0 = 2\frac{\partial E(\gamma_{\varepsilon})}{\partial \varepsilon}\\\\\
-    = \int_{a}^b \frac{\partial }{\partial \varepsilon}\left(g_{ij}\frac{\partial x^i}{\partial t} \frac{\partial x^j}{\partial t}\right)dt\\\\\
-    = 
-\\]
-
-/\*FINISH THIS COMPUTATION WHEN GOOD SYSTEM TO EXPLAIN STEPS IN EQUATION IS UP AND RUNNING\*/
-
-Therefore we conclude that for a line \\(\gamma(t) = (x^1(t), \cdots , x^n(t))\\) to be straight, it must satisfy
-\\[
-    \frac{d^2 x^k}{d t^2} + \sum_{ij} \frac{1}{2} g^{kl} \left(\frac{\partial g_{lj}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l}\right)\frac{d x^i}{d t}\frac{d x^i}{d t} = 0, \quad 1 \leq k \leq n
-\\]
-
-#### Definition of Geodesics
-A curve \\(\gamma(t)\\) is a *geodesic* if, when written in any local coordinates \\(\gamma(t) = (x^1(t), \cdots, x^n(t))\\), it locally satisfies the *geodesic equations*
-\\[
-    \ddot{x}^k(t) + \dot{x}^i(t)\dot{x}^j(t)\Gamma_{ij}^k(x(t)) = 0, \quad 1 \leq k \leq n
-\\]
-where the functions \\(\Gamma_{ij}^k\\) are the *Christoffel symbols* and are given in coordinates by
-\\[
-    \Gamma_{ij}^k = \frac{1}{2}g^{kl}(\partial_i g_{jl} + \partial_j g_{il} - \partial_l g_{ij})
-\\]
-
-
-#### Example: geodesics on the sphere (TODO: MOVE EVERYTHING BELOW TO SEPARATE PAGES)
-Computing geodesics on the sphere. We can express a path \\(\gamma: [a,b] \to \mathbb{S}^2\\) in coordinates by \\(\gamma(t) = (\theta(t), \phi(t))\\). First compute the Christoffel symbols /\*TODO: SHOW (hidden?) COMPUTATIONS FOR THESE\*/
-
-Recall \\(g = d\phi^2 + \sin\phi^2 d\theta^2\\)
-\\[\begin{align}
-    \Gamma_{\phi\phi}^{\phi} &= 0 \\\\\
-    \Gamma_{\phi\theta}^{\phi} &= \Gamma_{\theta\phi}^{\phi} = 0\\\\\
-    \Gamma_{\theta\theta}^{\phi} &= -\sin\phi\cos\phi\\\\\
-    \Gamma_{\phi\phi}^{\theta} &= 0\\\\\
-    \Gamma_{\phi\theta}^{\theta} &= \Gamma_{\theta\phi}^{\theta} = \cot\phi\\\\\
-    \Gamma_{\theta\theta}^{\theta} &= 0
-\end{align}\\]
-Hence the geodesic equations become
-\\[
-\begin{align}
-    \ddot{\theta}(t) + 2\dot{\theta}(t)\dot{\phi}(t)\cot(\phi(t)) &= 0\\\\\
-    \ddot{\phi}(t) - \dot{\theta}^2(t)\sin(\phi(t))\cos(\phi(t)) &= 0.
-\end{align}
-\\]
-Observe that the equator \\(\gamma(t) = (t, \pi/2)\\) satisfies the geodesic equations along with any meridian \\(\gamma(t) = (\theta, t)\\) for some constant \\(\theta\\).
-
-In fact, as any great circle on the sphere can be expressed as a meridian (by choosing the north and south pole to be on that great circle), this shows all great circles on the sphere are geoesics!
-
-#### Example: geodesics in hyperbolic space
-Computing geodesics in hyperbolic space.
-
-First compute the Christoffel symbols.
-\\[\begin{align}
-\Gamma_{xx}^x &= 0\\\\\
-\Gamma_{xy}^x &= \Gamma_{yx}^x = \frac{-1}{y}\\\\\
-\Gamma_{yy}^x &= 0\\\\\
-\Gamma_{xx}^y &= \frac{1}{y}\\\\\
-\Gamma_{xy}^y &= \Gamma_{yx}^y = 0\\\\\
-\Gamma_{yy}^y &= \frac{-1}{y}
-\end{align}\\]
-
-Thus the geodesic equations for a curve \\(\gamma(t) = (x(t), y(t))\\) are
-\\[\begin{align}
-\ddot{x}(t) - \frac{2}{y(t)}\dot{x}(t)\dot{y}(t) = 0\\\\\
-\ddot{y}(t) + \frac{1}{y}(\dot{x}(t)-\dot{y}(t)) = 0
-\end{align}\\]
-
-We can solve these equations as follows. Specifically, let's study solutions \\(\gamma\\) to the geodesic equations with unit speed \\(\|\dot{\gamma}(t)\| = 1\\). First observe that by the first equation
-\\[
-    y^2\frac{d}{d t}\left(y^{-2}\dot{x}(t)\right)
-    = \ddot{x}(t) - \frac{2}{y(t)}\dot{x}(t)\dot{y}(t) = 0.
-\\]
-By \\(y(t) \neq 0\\) we must have \\(\frac{d}{d t}y^{-2}\dot{x}(t) = 0\\). Therefore we have \\(\dot{x}(t) = cy^2\\) for some constant \\(c\\). We could plug this into the second equation; however, equivalent information is encoded into our assumption that \\(\gamma\\) has unit speed:
-\\[\begin{align}
-    y^{-2}(\dot{x}(t)+\dot{y}(t)) \implies \dot{y}(t) = y\sqrt{1-(cy)^2}
-\end{align}\\]
-This allows for a simpler solution for \\(y(t)\\) through separation of variables /\*TODO\*/.
-
-For \\(c = 0\\), this yields \\(y = y_0e^t\\) and \\(x = x_0\\). That is, vertical lines are geodesics.
-
-For \\(c \neq 0\\), this yields
-\\[
-    y(t) = \frac{1}{c \cosh(t+t_0)} \implies x(t) = \frac{1}{c}\tanh(t+t_0)+a.
-\\]
-To visualize this, oberserve 
-\\((x-a)^2+y^2 = \left(\frac{1}{c}\right)^2\\) and so half circles centered on the boundary \\(y = 0\\) are geodesics.
 
 /\*cite iva\*/
